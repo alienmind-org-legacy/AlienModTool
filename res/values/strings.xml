@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Yo, AlienMod user!</string>
+    <string name="app_name">AlienModTool</string>
+    <string-array name="actions_array">
+        <item>bootsound</item>
+        <item>bootsoundon</item>
+        <item>bootsoundoff</item>
+        <item>newbootsound</item>
+        <item>newbootanim</item>
+        <item>newlocksounds</item>
+    </string-array>
+    <string-array name="descriptions_array">
+        <item>Play current bootsound</item>
+        <item>Turn on bootsound</item>
+        <item>Turn off bootsound</item>
+        <item>/sdcard/android_audio.mp3 is copied as new bootsound</item>
+        <item>/sdcard/bootanimation.zip is copied as new boot animation</item>
+        <item>/sdcard/[un]lock.ogg are copied as new lock / unlock sound</item>
+    </string-array>    
+    <string-array name="uv_actions_array">
+        <item>25uvon</item>
+        <item>50uvon</item>
+        <item>uuvon</item>
+		<item>puvxon</item>
+        <item>puvon</item>
+        <item>uvoff</item>
+    </string-array>
+    <string-array name="uv_descriptions_array">
+        <item>-25mV Undervolting</item>
+        <item>-50mV Undervolting!</item>
+        <item>Ultra Undervolting</item>        
+        <item>Stable Pinky Undervolting</item>        
+        <item>Pinky Undervolting</item>
+        <item>Deactivate Undervolting</item>
+    </string-array>
+    <string-array name="extra_actions_array">
+        <item>swypeme</item>
+    </string-array>
+    <string-array name="extra_descriptions_array">
+        <item>Install Nexus S Swype</item>
+    </string-array>    
+</resources>
