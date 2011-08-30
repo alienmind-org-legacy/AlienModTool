@@ -9,6 +9,7 @@
 	    <activity android:name=".ActionsActivity" />    
 	    <activity android:name=".UVActivity" />
 	    <activity android:name=".ExtrasActivity" />
+	    <activity android:name=".ConsoleActivity" />	    
 	    <activity android:name=".AlienModTool" android:label="@string/app_name"
     		      android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>

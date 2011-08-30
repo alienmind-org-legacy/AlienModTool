@@ -1,45 +1,17 @@
 package org.alienmind.alienmod;
 
-import android.app.ListActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class ActionsActivity extends ListActivity {
-	String[] actions;
-	String[] descriptions;	
-	ScriptExecuter sce = null;
+public class ActionsActivity extends ScriptedActivity {
+	public boolean onItemSelected(String itemAction, String itemDescription) {
+		AlienModTool.getInstance().getTabHost().setCurrentTab(AlienModTool.TAB_CONSOLE);
+		return true;
+	}
 	
-    public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		sce          = new ScriptExecuter();
-		actions      = getResources().getStringArray(R.array.actions_array);
-		descriptions = getResources().getStringArray(R.array.descriptions_array);
-		setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, descriptions));
-
-		ListView lv = getListView();
-		lv.setTextFilterEnabled(true);
-
-		lv.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// When clicked, show a toast with the TextView text
-				Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
-						Toast.LENGTH_SHORT).show();
-				
-				try {
-					sce.execute(actions[position]);
-				} catch (Exception e) {
-					Toast.makeText(getApplicationContext(), e.getStackTrace().toString(), Toast.LENGTH_LONG).show();
-				} 
-				
-			}
-		});
-    }
+	public void onCreate(Bundle savedInstanceState) {
+		this.consoleView  = AlienModTool.getInstance().getConsoleView();		
+		this.actions      = getResources().getStringArray(R.array.actions_array);
+		this.descriptions = getResources().getStringArray(R.array.descriptions_array);
+		super.onCreate(savedInstanceState);		
+	}	
 }

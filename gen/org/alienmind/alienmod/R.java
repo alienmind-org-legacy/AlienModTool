@@ -19,16 +19,20 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_tab_actions=0x7f020000;
-        public static final int ic_tab_actions_grey=0x7f020001;
-        public static final int ic_tab_actions_white=0x7f020002;
-        public static final int ic_tab_extras=0x7f020003;
-        public static final int ic_tab_extras_grey=0x7f020004;
-        public static final int ic_tab_extras_white=0x7f020005;
-        public static final int ic_tab_uv=0x7f020006;
-        public static final int ic_tab_uv_grey=0x7f020007;
-        public static final int ic_tab_uv_white=0x7f020008;
-        public static final int icon=0x7f020009;
+        public static final int alien_background=0x7f020000;
+        public static final int ic_tab_actions=0x7f020001;
+        public static final int ic_tab_actions_grey=0x7f020002;
+        public static final int ic_tab_actions_white=0x7f020003;
+        public static final int ic_tab_console=0x7f020004;
+        public static final int ic_tab_console_grey=0x7f020005;
+        public static final int ic_tab_console_white=0x7f020006;
+        public static final int ic_tab_extras=0x7f020007;
+        public static final int ic_tab_extras_grey=0x7f020008;
+        public static final int ic_tab_extras_white=0x7f020009;
+        public static final int ic_tab_uv=0x7f02000a;
+        public static final int ic_tab_uv_grey=0x7f02000b;
+        public static final int ic_tab_uv_white=0x7f02000c;
+        public static final int icon=0x7f02000d;
     }
     public static final class layout {
         public static final int list_item=0x7f030000;

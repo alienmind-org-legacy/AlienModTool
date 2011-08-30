@@ -33,7 +33,6 @@ public abstract class ScriptedActivity extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 	
-		sce          = new ScriptExecuter();
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, descriptions));
 	
 		ListView lv = getListView();
@@ -55,7 +54,11 @@ public abstract class ScriptedActivity extends ListActivity {
 				Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
 						Toast.LENGTH_SHORT).show();				
 				try {
-					sce.execute(action, consoleView);
+					sce = new ScriptExecuter();					
+					sce.setScript(action);
+					sce.setConsoleView(consoleView);
+					sce.run();
+					//sce.wait();
 				} catch (Exception e) {
 					AlienModTool.getInstance().getConsoleView().append(e.getStackTrace().toString() + "\n");
 				}								
