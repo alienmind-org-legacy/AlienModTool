@@ -48,7 +48,13 @@ public abstract class ScriptedActivity extends ListActivity {
 				// Allow children to inhibit execution / switch to console / whatever
 				if (!onItemSelected(action, description)) {
 			      return;
-				}				
+				}
+				
+				// Special activity
+				if (isSpecialActivity(action)) {
+				  runSpecialActivity(action);
+				  return;
+				}
 				
 				// When clicked, show a toast with the TextView text
 				Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
@@ -56,12 +62,25 @@ public abstract class ScriptedActivity extends ListActivity {
 				try {
 					sce = new ScriptExecuter();					
 					sce.setScript(action);
-					sce.setConsoleView(consoleView);
 					sce.run();
 					//sce.wait();
 				} catch (Exception e) {
 					AlienModTool.getInstance().getConsoleView().append(e.getStackTrace().toString() + "\n");
 				}								
+			}
+
+			// Dirty hack
+			private void runSpecialActivity(String action) {
+				if (action.equals("clearconsole")) {
+					AlienModTool.getInstance().getConsoleView().setText("");
+				}				
+			}
+
+			private boolean isSpecialActivity(String action) {
+				if (action.equals("clearconsole")) {
+					return true;
+				}
+				return false;
 			}
 		});
 	}

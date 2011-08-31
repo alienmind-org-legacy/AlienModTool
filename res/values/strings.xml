@@ -32,12 +32,22 @@
         <item>Ultra Undervolting</item>        
         <item>Stable Pinky Undervolting</item>        
         <item>Pinky Undervolting</item>
-        <item>Deactivate Undervolting</item>
+        <item>Deactivate Undervolting</item>        
     </string-array>
     <string-array name="extra_actions_array">
+        <item>remountsysro</item>
+		<item>remountsysrw</item>
+        <item>fastchargeon</item>
+        <item>fastchargeoff</item>    
         <item>swypeme</item>
+        <item>clearconsole</item>        
     </string-array>
     <string-array name="extra_descriptions_array">
+        <item>Remount /system as read-only</item>
+        <item>Remount /system as read/write</item>        
+    	<item>Force high power charging</item>
+    	<item>Disable high power charging</item>    	
         <item>Install Nexus S Swype</item>
+        <item>Clear console window</item>
     </string-array>    
 </resources>
